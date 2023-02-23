@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/all_bg_ads_cross_banner">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_app_slide_show" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ads_info"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:paddingTop="@dimen/_1sdp"
+            android:singleLine="true"
+            android:text="Photo Video Editor"
+            android:textColor="#495057"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="15sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:singleLine="true"
+            android:text="@string/save_your_best_moment"
+            android:textColor="#70757A"
+            android:textSize="11dp"
+            app:autoSizeMaxTextSize="11dp"
+            app:autoSizeMinTextSize="8dp"
+            app:autoSizeTextType="uniform" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bt_open_ads"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@drawable/bg_btn_cross_banner"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="@string/install"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_ads_info"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_ads_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Ads By Eco Mobile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_ads_info"
+        app:layout_constraintEnd_toStartOf="@id/iv_ads_info"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ads_info"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_ads_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_ads_info"
+        app:srcCompat="@drawable/all_ic_ads_info_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

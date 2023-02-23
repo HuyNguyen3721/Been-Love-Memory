@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Been Love Memory</string>
+    <string name="save_your_best_moment">Save your best moment</string>
+    <string name="install">Install</string>
+    <string name="delete_fail">Delete fail</string>
+    <string name="delete_success">Delete success</string>
+    <string name="rename_successed">File renamed</string>
+    <string name="rename_fail">Rename fail</string>
+    <string name="share_to">Share to</string>
+</resources>
