@@ -3,7 +3,7 @@ package com.eco.beenlovememory.screen.start
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isVisible
-import com.eco.beenlovememory.MainActivity
+import com.eco.beenlovememory.screen.main.MainActivity
 import com.eco.beenlovememory.ads.InterstitialAdUtil
 import com.eco.beenlovememory.base.BaseActivity
 import com.eco.beenlovememory.databinding.ActivitySplashBinding

@@ -11,9 +11,12 @@ import androidx.viewbinding.ViewBinding
 import com.eco.beenlovememory.R
 import com.eco.beenlovememory.utils.FileUtils
 import com.eco.beenlovememory.utils.PermissionUtils
+import org.koin.android.scope.AndroidScopeComponent
+import org.koin.androidx.scope.fragmentScope
 
 
-abstract class BaseFragment<B : ViewBinding> : Fragment() {
+abstract class BaseFragment<B : ViewBinding> : Fragment() , AndroidScopeComponent {
+    override val scope by fragmentScope()
     lateinit var binding: B
     private var lastTimeClicked: Long = 0
     private var countTimer: CountDownTimer? = null

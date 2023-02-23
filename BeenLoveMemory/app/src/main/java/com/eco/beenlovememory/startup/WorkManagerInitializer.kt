@@ -1,15 +1,19 @@
 package com.eco.beenlovememory.startup
+
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.startup.Initializer
 import com.eco.beenlovememory.di.listModule
 import com.eco.beenlovememory.utils.PreferencesUtils
+import com.jakewharton.threetenabp.AndroidThreeTen
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.fragment.koin.fragmentFactory
 import org.koin.core.context.startKoin
 
 class WorkManagerInitializer : Initializer<String> {
     override fun create(context: Context): String {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        AndroidThreeTen.init(context)
         //koin
         setupKoin(context)
         //app flyer
@@ -42,8 +46,10 @@ class WorkManagerInitializer : Initializer<String> {
     override fun dependencies(): List<Class<out Initializer<*>>> {
         return emptyList()
     }
+
     private fun setupKoin(context: Context) {
         startKoin {
+            fragmentFactory()
             androidContext(context)
             modules(listModule)
         }
